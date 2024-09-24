@@ -1,10 +1,43 @@
 <!-- 
+
+Criterios evaluados
+
+    1a) Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.
+    1b) Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores web.
+    1c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes web.
+    1d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.
+    1e) Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.
+    1f) Se han reconocido y evaluado las herramientas de programación sobre clientes web.
+
+Actividades
+
+    Idea de la aplicación: Describir de manera clara y concisa la idea de la aplicación web y su propósito.
+
+    Audiencia objetivo: Definir el público para el que está destinada la aplicación, explicando su relevancia y cómo se beneficiarán de la aplicación.
+
+    Análisis de mercado: Investigar y analizar aplicaciones similares en el mercado. Identificar características comunes y oportunidades de diferenciación para la nueva aplicación, destacando qué valor añadido ofrecerá.
+
+    Funcionalidades clave: Identificar y listar las funcionalidades principales que ofrecerá la aplicación (ej: sistema de autenticación, gestión de usuarios, etc.).
+
+    Modelos de ejecución (c.e. 1a): Investigar y comparar los modelos de ejecución en cliente y servidor, explicando sus diferencias y ejemplos de uso.
+
+    Lenguajes de programación web (c.e. 1c, 1d): Analizar los lenguajes de programación más utilizados para el desarrollo web en cliente, como JavaScript y TypeScript, explicando sus ventajas y desventajas.
+
+    Tecnologías a utilizar: Seleccionar las tecnologías (lenguajes de programación, frameworks, herramientas de desarrollo) que se utilizarán para el desarrollo de la aplicación. Justificar la elección en base a la investigación realizada. Asegurarse de incluir:
+
+        Evaluación de los mecanismos de integración de lenguajes de marcas con lenguajes de programación de clientes web (c.e. 1e): Describir cómo los lenguajes de marcas (como HTML) se integran con los lenguajes de programación (como JavaScript) en la aplicación.
+
+        Evaluación de herramientas de programación para clientes web (c.e. 1f): Seleccionar herramientas de desarrollo (editores de código, frameworks, bibliotecas) y justificar su elección. Explicar las funciones y ventajas de cada herramienta en el contexto del desarrollo web.
+
+    Compatibilidad en navegadores (c.e. 1b): Realizar un estudio sobre cómo los diferentes navegadores manejan JavaScript y otros lenguajes utilizados en el desarrollo web, identificando problemas de compatibilidad y soluciones. Incluye un análisis sobre cómo la integración de lenguajes de marcas y lenguajes de programación afecta la compatibilidad y el rendimiento de la aplicación en diferentes navegadores.
+
+
 2. Informe técnico detallado que incluya:
 
-   Un análisis de los modelos de ejecución cliente/servidor, incluyendo ejemplos y comparaciones.
+   Done - Un análisis de los modelos de ejecución cliente/servidor, incluyendo ejemplos y comparaciones.
    La evaluación de los lenguajes de programación web seleccionados, destacando sus ventajas y desventajas.
-   Un estudio sobre la compatibilidad en navegadores, identificando posibles problemas y soluciones, y cómo estas consideraciones afectan la elección de tecnologías.
-   Un análisis de los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.
+   Done - Un estudio sobre la compatibilidad en navegadores, identificando posibles problemas y soluciones, y cómo estas consideraciones afectan la elección de tecnologías.
+   Done - Un análisis de los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.
    La evaluación de herramientas de programación para clientes web, explicando sus funciones y ventajas distintivas.
    Un análisis de mercado que detalle la competencia existente y cómo la propuesta se diferencia y aporta valor nuevo.
 -->
@@ -15,7 +48,7 @@
 
 ## Client/Server Analysis
 
-The idea for this application  is for it to follow a 3 tier architecture form initially built for web browsers with the 
+The idea for this application is for it to follow a 3 tier architecture form initially built for web browsers with the 
 ultimate goal of developing a hybrid app to primarily become a smartphone application.  
 
 ### Architecture
@@ -53,7 +86,7 @@ and browsers.
 
 ---
 
-<img src="assets/images/BrowserIcons.webp" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">   
+<img src="assets/img/BrowserIcons.webp" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">
 
 > Image credits to - [https://www.pcmag.com/picks/chrome-edge-firefox-opera-or-safari-which-browser-is-best](https://www.pcmag.com/picks/chrome-edge-firefox-opera-or-safari-which-browser-is-best)
 
@@ -70,7 +103,7 @@ browsers use different rendering engines: Internet Explorer uses Trident, Micros
 or Blink (newer versions), Firefox uses Gecko, and both Safari and Chrome (along with Opera from version 15) use WebKit 
 and Blink, respectively. 
 
-![Browser Lifecycle](assets/images/BrowserRenderingPipeline01.png)
+![Browser Lifecycle](assets/img/BrowserRenderingPipeline01.png)
 > Image credits to - [https://webperf.tips/tip/browser-rendering-pipeline/](https://webperf.tips/tip/browser-rendering-pipeline/)
 
 **Rendering Pipeline**  
@@ -102,9 +135,13 @@ and Blink, respectively.
 The browser’s default rendering process can effectively display web pages, but it becomes inefficient for dynamic content
 or frequent updates because it often involves transferring large amounts of data or re-rendering entire pages. To 
 improve performance and user experience, front-end libraries and frameworks like React, Vue.js, and Angular have 
-emerged giving way to single page applications (SPAs). These frameworks optimize the rendering process by creating a 
+emerged giving way to single page applications (SPAs). 
+
+These frameworks optimize the rendering process by creating a 
 Virtual DOM, a lightweight in-memory representation of the actual DOM. Only the necessary changes between the virtual 
 DOM and the actual DOM are sent to the browser, reducing re-rendering and improving performance.
+
+
 > Libraries are collections of pre-written code that developers use to perform specific tasks, offering flexibility and 
 reusability. Frameworks, on the other hand, provide a structured foundation for building applications, enforcing 
 certain conventions and workflows. While libraries allow for more freedom, frameworks guide development with 
@@ -113,8 +150,9 @@ but for simplicity's sake will be, at times, referred to as a framework.
 
 **Front-end Framework Lifecycle**  
 These front-end frameworks also introduce a component-based architecture. The lifecycle of these components is essential
-to understanding how they render, update, and clean up during their existence.  
-<img src="assets/images/front_end_frameworks.jpeg" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">
+to understanding how they render, update, and clean up during their existence. 
+
+<img src="assets/img/front_end_frameworks.jpeg" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">
 
 > Image credits to - [https://sourcebae.com/blog/what-is-the-best-front-end-framework-to-learn-and-why/](https://sourcebae.com/blog/what-is-the-best-front-end-framework-to-learn-and-why/) 
 
@@ -133,14 +171,15 @@ to understanding how they render, update, and clean up during their existence.
    When a component is no longer needed, it is removed from the DOM, and React cleans up any associated resources, like 
   event listeners or timers, to prevent memory leaks.
 
-### Back-end workings  
+### Back-end workings
+
+---
+
 The back-end refers to the server-side of web applications, responsible for managing data, application logic, and user 
 authentication. It typically involves technologies such as databases (e.g., MySQL, MongoDB), server-side programming 
 languages (e.g., Node.js, Python, Ruby), and frameworks (e.g., Express, Django). The back-end handles requests from the 
 front-end, processes them, and sends the appropriate responses, ensuring seamless interaction between the user interface
 and the underlying data systems.
-
----
 
 ### Business Layer
 The business layer, often referred to as the business logic layer, is a crucial component of a 3-tier architecture in 
@@ -150,7 +189,7 @@ end, ensuring that data is properly accessed, manipulated, and stored.
 > While the rest of the business section will speak primarily from the perspective of the Spring framework, most of the 
 responsibilities and methods will be applicable to various frameworks.
 
-**Responsibilities**
+**Responsibilities -**
 
 - **Business Logic Implementation** 
 
@@ -196,7 +235,7 @@ accessed.
 > While this section will primarily reference Java Persistence API (JPA) for the data layer, the principles discussed 
 are applicable across various frameworks.
 
-**Responsibilities**
+**Responsibilities -**
 
 - **Data Storage and Retrieval**
 
@@ -236,26 +275,184 @@ overall functionality.
 > By isolating data management from the business and presentation layers, the data layer promotes modularity, making it 
 easier to manage data, improve performance, and adapt to changing data requirements as the application evolves.
 
-[Browser rendering pipeline](https://webperf.tips/tip/browser-rendering-pipeline/)
-[Browser working mechanisms](https://medium.com/tech-desk/browsers-and-their-working-mechanisms-33a6a6e3a681)
-[How a web application works](https://medium.com/@mikesparr/how-web-applications-work-3824f4b7ebeb)
-[What is business logic](https://www.g2.com/articles/business-logic)
-[Understanding business logic](https://www.integrify.com/what-is-business-logic/)
+[Browser rendering pipeline](https://webperf.tips/tip/browser-rendering-pipeline/)  
+[Browser working mechanisms](https://medium.com/tech-desk/browsers-and-their-working-mechanisms-33a6a6e3a681)  
+[How a web application works](https://medium.com/@mikesparr/how-web-applications-work-3824f4b7ebeb)  
+[What is business logic](https://www.g2.com/articles/business-logic)  
+[Understanding business logic](https://www.integrify.com/what-is-business-logic/)  
 
 ## Web Developing Languages
+
+---
 
 JavaScript, Python, SQL, Typescript, Perl, Java, C#, C++, Ruby, PHP, Go
 <!-- HTML, CSS -->
 
-[Top Web Programming Languages](https://flatirons.com/blog/top-10-web-programming-languages-for-2023/)
-[Best Web Development Languages](https://inveritasoft.com/blog/the-best-web-application-development-languages)
-[Most Used Programming Languages](https://www.tiobe.com/tiobe-index/)
+[Top Web Programming Languages](https://flatirons.com/blog/top-10-web-programming-languages-for-2023/)  
+[Best Web Development Languages](https://inveritasoft.com/blog/the-best-web-application-development-languages)  
+[Most Used Programming Languages](https://www.tiobe.com/tiobe-index/)  
 
 ## Browser Compatibility
 
+---
+
+### Are all browsers compatible with the same web application?
+All major browsers strive to be compliant with standards set by both the W3C (World Wide Web Consortium) and the WHATWG
+(Web Hypertext Application Technology). This helps ensure that they maintain a high level of compatibility and can support
+the latest features of HTML, CSS, and JavaScript. However, there are still differences between the browsers that could
+lead to compatability issues.
+
+![Picture did not load](assets/img/browser_compatability.png)
+
+> Image credit to http://davincisdk.blogspot.com/2013/11/html5-browser-support.html
+
+#### - Possible compatability issues
+- **JS APIs** - Browsers can differ on the level of support they have for certain APIs. If the application depends on these
+  APIs for functionality special care must be taken to ensure compatability.
+- **Experimental CSS** - To incorporate some experimental css properties browsers may require different prefixes to
+- **Web Components** - Similar to JS APIs support web components can vary among different browsers and should be tested
+  for compatability
+
+### Ways to avoid compatability issues
+Though compatability issues do exist and are nigh inevitable, making sure proper testing takes place to judge compatability
+and tracking of known issues is of high priority. There are also some practices and actions that can be followed to help
+ensure browser compatability.
+
+#### - Solutions
+- Above all, using standardized web technologies recommended by the W3C
+- Using clean code and best coding practices
+- Using cross-browser testing
+- Using feature detection libraries to ensure feature support before applying functionalities and offering alternatives
+
 ## Markup Languages Integration
 
+---
+
+HTML is the standard markup language for web development, used to structure content across virtually all websites. 
+Alongside it, CSS is the predominant language for styling, and JavaScript dominates the web as the primary scripting 
+language. Together, these three technologies form the backbone of web development, enabling the creation of dynamic, 
+interactive, and responsive web applications.
+
+[Technology market share](https://6sense.com/tech/languages/javascript-market-share)  
+
+### JavaScript can manipulate HTML and CSS
+
+#### Native JavaScript  
+    
+- JavaScript can directly manipulate HTML and CSS by interacting with the DOM (Document Object Model). Developers use 
+methods like document.getElementById(), document.querySelector(), and document.querySelectorAll() to select specific 
+elements and change their properties.
+
+```javascript
+const element1 = document.getElementById('myElement');  
+const element2 = document.querySelector('.myClass');
+const elements = document.querySelectorAll('.myClass');
+```
+
+- Once the element is selected, JavaScript can modify its properties, such as changing the text content, or styling.
+
+```javascript
+// Accessing an element's methods
+element.innerHTML = "New content!"; // changes the content of the element
+element.classList.add("newClass"); // adds a new CSS class to the element
+element.style.backgroundColor = "red"; // changes the background color of the element
+```
+
+- Developers can also add event listeners to respond to user interactions like clicks or key presses.
+
+```javascript
+let button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+     console.log("Button clicked!");
+});
+```
+> These techniques enable developers to build interactive and dynamic web pages.
+
+[Manipulating HTML with JavaScript](https://www.geeksforgeeks.org/manipulating-html-elements-with-javascript/)
+
+#### React
+
+**Declarative Syntax** - Unlike native JavaScript, React uses a declarative syntax that allows developers to describe 
+what the UI should look like based on the current state of the application. Instead of directly manipulating the DOM, 
+developers create components that represent parts of the UI, and React automatically updates the DOM when the state 
+changes.
+
+```javascript
+import React, { useState } from 'react';
+
+const MyComponent = () => {
+const [content, setContent] = useState("Initial content");
+
+    return (
+        <div>
+            <p>{content}</p>
+            <button onClick={() => setContent("New content!")}>Change Content</button>
+        </div>
+    );
+};
+```
+
+> In this example, the state is managed using the useState hook, and when the button is clicked, the state updates, 
+which triggers a re-render of the component. React handles the necessary DOM and virtual DOM manipulation behind the 
+scenes, leading to cleaner and more maintainable code.
+
+[Intro to React](https://react.dev/learn)  
+[What is React](https://medium.com/@xspaces2011/introduction-to-react-f197c4eb67f4)  
+
+### HTML can import JavaScript and CSS
+
+HTML has the ability to import external JavaScript and CSS files using the `<script>` and `<link>` tags, respectively.
+
+**JavaScript Import**  
+JavaScript files can be executed in HTML by either -  
+- Placing the script in between opening and closing `<script>` tags.
+
+```html
+<script>
+  console.log('Hello World!');
+  // JavaScript code here
+</script>
+```
+
+- Or linking an eternal JavaScript file using the `src` attribute. Which will give that HTML file access to the JS code 
+without having to write all the code in the same file as the HTML.
+
+```html
+<script src="script.js">
+  //Some super cool JavaScript
+</script>
+```
+
+[How HTML, CSS and JavaScript work together](https://www.webosaurus.co.uk/news/web-design-basics-how-html-css-and-javascript-work-together/)  
+[HTML and JavaScript Integration](https://daily.dev/blog/html-and-javascript-integration-basics)
+
+### CSS applies styles to HTML
+
+Cascading style sheets can also be applied to HTML in a similar way to JavaScript. CSS can be applied to HTML by either -
+
+- Placing the CSS code in between opening and closing `<style>` tags
+
+```html
+<style>
+  body {
+    background-color: lightblue;
+  }
+</style>
+```
+
+- Or linking an eternal CSS file using the `href` attribute. Which will give that HTML file access to the CSS code.
+The `rel` attribute specifies the relationship between the HTML file and the linked file.
+
+```html
+<link rel="stylesheet" type="text/css" href="styles.css">
+```
+
+[Importing CSS into HTML](https://www.w3schools.com/html/html_css.asp)  
+[How to link CSS to HTML](https://www.freecodecamp.org/news/how-to-link-css-to-html/)
+
 ## Web Client Programming Tools
+
+---
 
 Front-end, Back-end, Styling
 
