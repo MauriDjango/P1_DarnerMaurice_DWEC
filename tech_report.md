@@ -1,6 +1,10 @@
-# Tabletop Game Community Application
+# Adeptus Nexus
 
-###### Technical Report
+###### Tabletop Game Community Application
+
+---
+
+### Technical Report
 
 ---
 
@@ -8,24 +12,16 @@
 
 1. [Client/Server Analysis](#clientserver-analysis)
     - [Architecture](#architecture)
-    - 
     - [Front-end Workings](#front-end-workings)
-    - 
     - [Browsers](#browsers)
-       
     - [Frameworks and Libraries](#frameworks-and-libraries)
-    - 
     - [Back-end Workings](#back-end-workings)
       
 2. [Web Development Languages](#web-development-languages)
     - [Script Language Characteristics](#script-language-characteristics)
-       
     - [Client-side Languages](#client-side-languages)
-       
     - [Server-side Languages](#server-side-languages)
-     
     - [Database and Query Languages](#database-and-query-languages)
-   
     - [Other Languages](#other-languages)
        
 3. [Browser Compatibility](#browser-compatibility)
@@ -44,8 +40,6 @@
    
 7. [Bibliography](#bibliography)
 
-
-
 ---
 
 # Client/Server Analysis
@@ -56,7 +50,7 @@
 
 The idea for this application is for it to follow a 3-tier architecture, initially built for web browsers, with the
 ultimate goal of developing a hybrid app primarily for smartphones.
-We are selecting 3-tier architecture, meaning that the data, application, and presentation will be held in separate 
+We are selecting a 3-tier architecture, meaning that the data, application, and presentation will be held in separate 
 layers, being the most adequate and widely used architecture for an app of this type.
 
 <img src="assets/img/3_tier_architecture.png" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">
@@ -83,11 +77,12 @@ Image credits to - [https://www.zirous.com/2022/11/15/three-tier-architecture-ap
 
 ---
 
-## Front-end Workings
+## Front-end
 
 Front-end development, often synonymous with the presentation layer, focuses on creating the visual elements and user
-interface of web applications that users interact with directly. It involves using technologies like HTML, CSS, and
-JavaScript to build responsive and dynamic layouts, ensuring an engaging user experience across different devices and browsers.
+interface of web applications that users interact with directly. It involves using technologies like HTML, CSS,
+JavaScript, and various libraries and frameworks to build responsive and dynamic layouts, ensuring an engaging user 
+experience across different devices and browsers.
 
 <img src="assets/img/front_end.jpg" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">
 
@@ -97,9 +92,10 @@ Image credits to - [https://torquemag.io/2020/06/browser-developer-tools-tutoria
 
 ## Browsers
 
-Browsers are essential tools that allow users to access web applications by interpreting HTML, CSS, and JavaScript. They
-serve as intermediaries between users and web content, using different rendering engines—such as Blink in Chrome and 
-Opera, Gecko in Firefox, and Trident in Internet Explorer—to process and display pages.
+Browsers are essential applications that allow users to access web applications by interpreting HTML, CSS, and JavaScript. They
+serve as intermediaries between users and web content. Using different rendering engines—such as Blink in Chrome and 
+Opera, Gecko in Firefox, and Trident in Internet Explorer, browser can process and render pages for user to view and 
+interact with.
 
 <img src="assets/img/browser_icons.webp" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">   
 
@@ -109,36 +105,39 @@ Image credits to - [https://www.pcmag.com/picks/chrome-edge-firefox-opera-or-saf
 
 ### Browser Lifecycle
 
-The client's device makes a request to the application server to access the application. The app server returns the data
-required and what needs to be shown (rendered) on the device's screen. In the case of a browser-based web application, 
-the browser receives this data from its networking layer, which is then passed on to the rendering engine.
+The way the browser works from begging to finished can be considered the browsers' lifecycle. The client's device makes a
+request to the application server to access the application. The app server returns the data required and what needs to
+be shown (rendered) on the device's screen. 
 
 ### Rendering Pipeline
 
-<img src="assets/img/browser_rendering_pipeline.png" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">   
+In the case of a browser-based web application, the browser receives this data from its networking layer, which is then
+passed on to the rendering engine to be processed and displayed. This process can be referred to as the rendering pipeline.
 
+<img src="assets/img/browser_rendering_pipeline.png" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">
 
 1. **HTML parsing into DOM**  
 
-  - The rendering engine parses the HTML data and converts it into a Document Object Model (DOM) nodes into a tree called
-  the "DOM tree" or "Content tree." Each node corresponds to an HTML tag, forming the content structure of the page.
+  - The rendering engine parses the HTML data received from the application server and converts it into a Document Object
+Model (DOM) nodes into a tree called the "DOM tree" or "Content tree." Each node corresponds to an HTML tag, forming the
+content structure of the page.
 
 2. **CSS parsing into CSSOM**  
 
-  - Simultaneously, the browser parses the CSS stylesheets and inline styles to build a CSS Object Model (CSSOM), which 
-  is a tree-like structure representing the styles to be applied to the DOM.
+  - Simultaneously, the browser parses the CSS stylesheets and inline styles that were also received to build a CSS Object
+Model (CSSOM), which is a tree-like structure representing the styles to be applied to the DOM.
 
 3. **JavaScript Execution**  
 
-  - Once the DOM and CSSOM are built, the browser executes JavaScript. JavaScript can modify both the HTML (DOM) and CSS 
-  (CSSOM). However, JavaScript execution can block other processes, particularly parsing, unless asynchronous or deferred
+  - Once the DOM and CSSOM are built, the browser executes any JavaScript found. JavaScript can modify both the HTML (DOM) and CSS 
+  (CSSOM). Be aware, however, that JavaScript execution can block other processes, particularly parsing, unless asynchronous or deferred
   methods are used to load the scripts.
 
 4. **Layout Phase**  
 
   - The browser uses the DOM and CSSOM to create a Render Tree, which defines the layout of the page. This step calculates
-  the positions of all elements on the page. Any changes to the DOM or CSSOM trigger reflow, which recalculates the 
-  layout—a potentially resource-intensive task.
+  the positions of all elements on the page. Any changes to the DOM or CSSOM trigger a reflow, which recalculates the 
+  layout — a potentially resource intensive task - so that the render tree remains up to date.
 
 5. **Painting** 
 
@@ -165,14 +164,16 @@ actual DOM. Only the necessary changes between the virtual DOM and the actual DO
 re-rendering and improving performance.
 
 > Libraries are collections of pre-written code that developers use to perform specific tasks, offering flexibility and 
-> reusability. Frameworks, on the other hand, provide a structured foundation for building applications, enforcing 
-> certain conventions and workflows. While libraries allow for more freedom, frameworks guide development with predefined
-> patterns. Both are essential tools in modern software development. React is a library and not a framework, but for 
-> simplicity's sake, will be, at times, referred to as a framework.
+reusability. Frameworks, on the other hand, provide a structured foundation for building applications, enforcing 
+certain conventions and workflows. While libraries allow for more freedom, frameworks guide development with predefined
+patterns. Both are essential tools in modern software development. React is a library and not a framework, but for 
+simplicity's sake, will be, at times, referred to as a framework.
 
 ### Front-end Framework Lifecycle  
-These front-end frameworks also introduce a component-based architecture. The lifecycle of these components is essential
-to understanding how they render, update, and clean up during their existence.
+
+These front-end frameworks also introduce a component-based architecture. Much like that of a browser these frameworks also tend to work in 
+a cyclical manner. The lifecycle of these components is essential to understanding how they render, update, and clean up
+during their existence.
 
 1. **Mounting**  
   The component is created and inserted into the DOM. This is when the constructor is called in React, initializing the
@@ -188,14 +189,15 @@ to understanding how they render, update, and clean up during their existence.
   When a component is no longer needed, it is removed from the DOM, and React cleans up any associated resources, like 
   event listeners or timers, to prevent memory leaks.
 
+> We will go into further detail on how to use these frameworks later on
+
 Image credits to - [https://sourcebae.com/blog/what-is-the-best-front-end-framework-to-learn-and-why/](https://sourcebae.com/blog/what-is-the-best-front-end-framework-to-learn-and-why/)
 
 ---
 
 ## Back-end Workings
 
-The back-end refers to the server-side of web applications, responsible for managing data, application logic, and user 
-authentication. It typically involves technologies such as databases (e.g., MySQL, MongoDB), server-side programming 
+The back-end refers to the server-side of web applications, responsible for managing data (Data Layer) and application logic (Business Layer). It typically involves technologies such as databases (e.g., MySQL, MongoDB), server-side programming 
 languages (e.g., Node.js, Python, Ruby), and frameworks (e.g., Express, Django). The back-end handles requests from the 
 front-end, processes them, and sends the appropriate responses, ensuring seamless interaction between the user interface
 and the underlying data systems.
@@ -211,7 +213,7 @@ Image credit to - [https://medium.com/@adityagaba1322/streamlining-backend-front
 
 <img src="assets/img/spring.png" alt="Browser Icons" style="max-width: 300px; width: auto; height: auto;">   
 
-The business layer, often referred to as the business logic layer, is a crucial component of a 3-tier architecture in 
+The business layer, often referred to as the business logic layer or application server, is a crucial component of a 3-tier architecture in 
 software development. Its primary role is to encapsulate the core business rules and processes that dictate how data is 
 created, stored, and manipulated within the application. It serves as a middle ground between the database and the front
 end, ensuring that data is properly accessed, manipulated, and stored.
@@ -226,7 +228,7 @@ end, ensuring that data is properly accessed, manipulated, and stored.
   It defines the rules and conditions under which data can be processed, ensuring that operations align with business 
   requirements. In the case of Spring, service methods are provided to handle tasks such as creating, deleting, updating,
   and reading data from the database or (CRUD) operations. To help keep the front-end data models separate from the database
-  models, aside from the fact that many times they are not a 1:1 replica of each other, Data Transfer Objects are used to 
+  models, aside from the fact that many times they are not a 1:1 replica of each other, **Data Transfer Objects** are used to 
   transfer data between the business logic and user interface.
 
 - **Data Validation**  
@@ -241,7 +243,7 @@ end, ensuring that data is properly accessed, manipulated, and stored.
 
 - **Communication with Data Layer**  
   The business layer interacts with the data layer to retrieve and manipulate data, providing a clear separation between
-  business logic and data access. Integration with external services allows the business layer to enhance functionality 
+  business logic and data access. Integration with external services also allows the business layer to enhance functionality 
   or retrieve additional data. The `@Repository` annotation offers a selection of data access methods, adding a layer of
   abstraction between the business layer and the database.
 
@@ -272,8 +274,8 @@ and serves as the interface for the business layer, ensuring that data is effici
   with minimal **boilerplate** code.
 
 > Boilerplate code refers to sections of code that are repeated in multiple places with little or no variation. It 
-> typically includes standard or routine tasks that developers must perform to set up functionality, but which do not 
-> contribute to the unique features of the application. This kind of code can be tedious to write and maintain.
+typically includes standard or routine tasks that developers must perform to set up functionality, but which do not 
+contribute to the unique features of the application. This kind of code can be tedious to write and maintain.
 
 - **Data Abstraction**  
   JPA abstracts the complexities of database interactions from the business layer. By defining entity classes that map 
@@ -308,7 +310,8 @@ Image credit to - [https://www.toptal.com/database/database-design-bad-practices
 
 Web development relies on various programming languages, each suited for specific tasks, from client-side scripting to 
 server-side logic and database management. Below is a list of the most widely used languages in modern web development, 
-categorized based on their primary use cases.
+categorized based on their primary use cases. However, before we get into that we should make the effort to distinguish 
+between two very common types of programming languages.
 
 <img src="assets/img/programming_languages.png" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">   
 
@@ -326,7 +329,8 @@ One key difference between scripting languages and traditional programming langu
 
 ### Scripting Languages
 
-Scripting languages offer several advantages for front-end web development, making them suitable for tasks that require flexibility, dynamic behavior, and ease of maintenance. Key characteristics include:
+Scripting languages offer several advantages for front-end web development, making them suitable for tasks that require 
+flexibility, dynamic behavior, and ease of maintenance. Key characteristics include:
 
 - **Dynamic Typing**: Variables do not require explicit type declarations, allowing for more flexible and adaptable code.
 - **Interpreted Execution**: Code can be run directly without the need for compilation, enabling rapid development and easier testing.
@@ -336,7 +340,11 @@ Scripting languages offer several advantages for front-end web development, maki
 
 ### Traditional Programming Languages
 
-Traditional programming languages, such as **Java**, **C++**, and **C#**, are compiled languages typically associated with developing large, complex applications. While they offer advantages in performance and reliability, they require more stringent development practices and are less flexible for rapid front-end changes. Key characteristics include:
+Traditional programming languages, such as **Java**, **C++**, and **C#**, are compiled languages typically associated with
+developing large, complex applications, as well as back-end development. While they offer advantages in performance and reliability, they require more 
+stringent development practices and are less flexible for rapid front-end changes. 
+
+#### Some key characteristics include:
 
 - **Strict Typing**: Variables must be explicitly declared with their data types, reducing runtime errors and resulting in more reliable, predictable code.
 - **Compiled Code**: The code is compiled into machine code, resulting in faster execution times, especially for performance-critical tasks.
@@ -383,7 +391,8 @@ Image credits to - [https://codecondo.com/12-top-skills-needed-to-be-a-front-end
 
 ## Server-side Languages
 
-Server-side languages run on the web server and are responsible for processing requests, handling business logic, and managing databases.
+Server-side languages run on the web server and are responsible for processing requests, handling business logic, and managing
+databases. Some languages can also extend into developing server based applications.
 
 <img src="assets/img/backend_languages.png" alt="Browser Icons" style="max-width: 400px; width: auto; height: auto;">   
 
@@ -457,15 +466,89 @@ These languages are used to interact with databases, enabling developers to stor
 
 <img src="assets/img/database.png" alt="Browser Icons" style="max-width: 500px; width: auto; height: auto;">   
 
-### SQL (Structured Query Language)  
+- **SQL (Structured Query Language)**  
   SQL is the standard language for querying and managing relational databases like MySQL, PostgreSQL, and SQLite.
-  - **Advantages**:
-    - Standardized language for interacting with relational databases.
-    - Efficient for performing CRUD (Create, Read, Update, Delete) operations.
-    - Well-supported across numerous relational database management systems.
-  - **Disadvantages**:
-    - Less flexible for non-relational or hierarchical data structures.
-    - May suffer from performance bottlenecks with very large datasets or poorly optimized queries.
+    - **Advantages**:
+        - Standardized language for interacting with relational databases.
+        - Efficient for performing CRUD (Create, Read, Update, Delete) operations.
+        - Well-supported across numerous relational database management systems.
+    - **Disadvantages**:
+        - Less flexible for non-relational or hierarchical data structures.
+        - May suffer from performance bottlenecks with very large datasets or poorly optimized queries.
+
+- **NoSQL (Not Only SQL)**  
+  NoSQL refers to a group of database technologies designed for large-scale, non-relational databases. It is often used 
+  in real-time web applications and big data analytics. Popular NoSQL databases include MongoDB, Cassandra, and Couchbase.
+    - **Advantages**:
+        - Highly scalable, making it suitable for big data applications.
+        - Supports flexible data models (e.g., document-based, key-value, graph).
+        - Well-suited for distributed systems and real-time applications.
+    - **Disadvantages**:
+        - Lack of standardization compared to SQL databases.
+        - Limited transactional support compared to relational databases.
+        - Can be harder to maintain consistency across distributed nodes.
+
+- **GraphQL**  
+  A query language for APIs and a runtime to execute queries on data. GraphQL allows clients to request specific data 
+  rather than retrieving a full dataset, improving efficiency.
+    - **Advantages**:
+        - Efficient and flexible, allowing clients to request only the data they need.
+        - Strongly typed schema, improving consistency and documentation.
+        - Reduces over-fetching or under-fetching of data.
+    - **Disadvantages**:
+        - Complexity in setting up a GraphQL server.
+        - Increased potential for overly complex queries, which may affect performance.
+        - Requires learning a new syntax compared to traditional REST APIs.
+
+- **T-SQL (Transact-SQL)**  
+  An extension of SQL used primarily with Microsoft SQL Server. T-SQL includes additional features like procedural 
+  programming and error handling, making it powerful for enterprise-level database management.
+    - **Advantages**:
+        - Offers advanced capabilities like error handling, transactions, and procedural programming.
+        - Well-integrated with Microsoft SQL Server and other Microsoft tools.
+        - Highly optimized for complex queries and stored procedures.
+    - **Disadvantages**:
+        - Limited portability due to its tight integration with SQL Server.
+        - Steeper learning curve compared to basic SQL for beginners.
+
+- **PL/SQL (Procedural Language for SQL)**  
+  PL/SQL is Oracle Corporation's procedural extension for SQL, primarily used in Oracle databases. It combines SQL with
+  procedural programming constructs, making it useful for automating complex queries and database tasks.
+    - **Advantages**:
+        - Seamless integration with Oracle databases, enabling powerful database automation.
+        - Supports complex operations and control structures (loops, conditions).
+        - Excellent for writing stored procedures, triggers, and functions.
+    - **Disadvantages**:
+        - Only usable within Oracle databases, reducing portability.
+        - Can lead to complex and hard-to-maintain code for non-trivial operations.
+
+- **MongoDB Query Language (MQL)**  
+  MongoDB uses a flexible document-based query language (MQL) to interact with its NoSQL database, allowing developers to
+  perform complex queries, aggregation, and filtering operations on JSON-like documents.
+    - **Advantages**:
+        - Easy to work with for developers familiar with JSON.
+        - Highly flexible schema, allowing for easy data manipulation without predefined structure.
+        - Built-in support for sharding and horizontal scaling.
+    - **Disadvantages**:
+        - Lack of ACID (Atomicity, Consistency, Isolation, Durability) transactions in older versions.
+        - May require additional layers of application logic for complex relational operations.
+        - Not ideal for highly structured or relational data models.
+
+- **CQL (Cassandra Query Language)**  
+  CQL is the query language used for interacting with Cassandra, a highly scalable NoSQL database optimized for high 
+  availability and fault tolerance.
+    - **Advantages**:
+        - Optimized for large-scale, high-performance applications.
+        - Offers tunable consistency, allowing trade-offs between consistency and performance.
+        - Efficient for distributed systems with high write throughput.
+    - **Disadvantages**:
+        - Limited support for complex queries like JOINs.
+        - Requires careful design to avoid performance bottlenecks, especially with secondary indexing.
+        - Higher learning curve compared to SQL for traditional relational databases.
+
+These database and query languages offer varying advantages and limitations, depending on the application's needs, whether
+it is relational, non-relational, or a mix of both. Modern web development often combines several of these technologies
+to meet different data requirements.
 
 Image credit to - [https://www.linkedin.com/pulse/sql-darshika-srivastava-1f](https://www.linkedin.com/pulse/sql-darshika-srivastava-1f)
 
@@ -495,7 +578,7 @@ These languages are used for specialized purposes in web development or performa
     - Steep learning curve and complex syntax.
     - Requires manual memory management, leading to potential risks of errors or memory leaks.
 
-These languages collectively form the foundation of modern web development, each offering specific strengths and 
+> These languages collectively form the foundation of modern web development, each offering specific strengths and 
 weaknesses depending on the project requirements.
 
 ---
@@ -520,7 +603,7 @@ affecting the functionality and appearance of web applications across different 
   supported in older browsers, necessitating polyfills.
 
 > Polyfills are scripts or libraries that offer new browser functionalities to older browsers that might not 
-> support them
+support them
 
 - **Experimental CSS**: Some experimental CSS properties may require different prefixes (like `-webkit-`, `-moz-`, etc.) 
   for different browsers. This means developers often need to write additional CSS rules to accommodate various browser engines.
@@ -568,7 +651,7 @@ Image credit to - [Da Vinci SDK](http://davincisdk.blogspot.com/2013/11/html5-br
 # Markup Languages Integration
 
 HTML is the standard markup language for web development, used to structure content across virtually all websites. 
-Alongside it, CSS is the predominant language for styling, and JavaScript dominates the web as the primary scripting 
+Alongside it, CSS is the standard language for styling, and JavaScript dominates the web as the primary scripting 
 language. Together, these three technologies form the backbone of web development, enabling the creation of dynamic, 
 interactive, and responsive web applications.
 
@@ -585,13 +668,14 @@ responsive features in web applications by allowing developers to manipulate the
 events, and make asynchronous requests. As a core technology of the web, JavaScript is essential for creating rich user 
 experiences alongside HTML and CSS.
 
-
+### Examples usage of JavaScript
 
 - JavaScript can directly manipulate HTML and CSS by interacting with the DOM (Document Object Model). Developers use
-methods like document.getElementById(), document.querySelector(), and document.querySelectorAll() to select specific
+methods like `document.getElementById()`, `document.querySelector()`, and `document.querySelectorAll()` to select specific
 elements and change their properties.
 
 ```javascript
+// Selecting an HTML element based one one of it's properties
 const element1 = document.getElementById('myElement');  
 const element2 = document.querySelector('.myClass');
 const elements = document.querySelectorAll('.myClass');
@@ -614,13 +698,14 @@ button.addEventListener("click", function() {
      console.log("Button clicked!");
 });
 ```
-> These techniques enable developers to build interactive and dynamic web pages.
+
+These techniques enable developers to build interactive and dynamic web pages.
 
 Image credit to - [https://simple.wikipedia.org/wiki/JavaScript](https://simple.wikipedia.org/wiki/JavaScript)
 
 ---
 
-### React JavaScript
+### React
 
 React is an open-source JavaScript library developed by Facebook for building user interfaces, particularly single-page 
 applications. It enables developers to create reusable UI components that efficiently update and render in response to 
@@ -629,12 +714,10 @@ simplifies the development of dynamic web applications.
 
 <img src="assets/img/react.png" alt="Browser Icons" style="max-width: 250px; width: auto; height: auto;">
 
-Image credits to - [https://medium.com/@kalanamalshan98/unleashing-the-power-of-react-js-real-world-benefits-and-examples-db9165aa1376](https://medium.com/@kalanamalshan98/unleashing-the-power-of-react-js-real-world-benefits-and-examples-db9165aa1376)
-
-**Declarative Syntax**
+**React uses Declarative Syntax**
 : Unlike native JavaScript, React uses a declarative syntax that allows developers to describe 
 what the UI should look like based on the current state of the application. Instead of directly manipulating the DOM, 
-developers create components that represent parts of the UI, and React automatically updates the DOM when the state 
+developers create components that represent parts of the UI, and React automatically updates the virtual DOM when the state 
 changes.
 
 ```javascript
@@ -652,14 +735,15 @@ const [content, setContent] = useState("Initial content");
 };
 ```
 
-> In this example, the state is managed using the useState hook, and when the button is clicked, the state updates, 
+> In this example, the state is managed using the `useState()` hook, and when the button is clicked, the state updates, 
 which triggers a re-render of the component. React handles the necessary DOM and virtual DOM manipulation behind the 
 scenes, leading to cleaner and more maintainable code.
 
+Image credits to - [https://medium.com/@kalanamalshan98/unleashing-the-power-of-react-js-real-world-benefits-and-examples-db9165aa1376](https://medium.com/@kalanamalshan98/unleashing-the-power-of-react-js-real-world-benefits-and-examples-db9165aa1376)
+
 ---
 
-
-## HTML can import JavaScript and CSS
+## HTML can import JavaScript
 
 HTML has the ability to import external JavaScript and CSS files using the `<script>` and `<link>` tags, respectively.
 
@@ -689,7 +773,7 @@ Image credit to - [https://www.oxfordwebstudio.com/en/did-you-know/what-is-html]
 
 ---
 
-## CSS applies styles to HTML
+## CSS can apply styles to HTML
 
 <img src="assets/img/css.png" alt="Browser Icons" style="max-width: 150px; width: auto; height: auto;">
 
@@ -704,13 +788,27 @@ Cascading style sheets can also be applied to HTML in a similar way to JavaScrip
   }
 </style>
 ```
+```CSS
+/* CSS Style sheet with Styling for the heading */
+h1 {
+    color: blue;
+    text-align: center;
+    font-size: 36px;
+}
+```
 
-- Or linking an eternal CSS file using the `href` attribute. Which will give that HTML file access to the CSS code.
+- Linking an eternal CSS file using the `href` attribute. Which will give that HTML file access to the CSS code.
 The `rel` attribute specifies the relationship between the HTML file and the linked file.
 
 ```html
 <link rel="stylesheet" type="text/css" href="styles.css">
 ```
+
+- Directly in an HTML element
+
+```HTML
+    <p style="font-size: 16px; color: green;">The text is green and has a font size of 16px.</p>
+   ```
 
 Image credits to - [https://delta-dev-software.fr/beginners-guide-to-learning-css-cascading-style-sheets-tutorial](https://delta-dev-software.fr/beginners-guide-to-learning-css-cascading-style-sheets-tutorial)
 

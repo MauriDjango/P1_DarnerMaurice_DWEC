@@ -1,6 +1,13 @@
 
 # Project 1: Developing a Web Application - From Theory to Practice
 
+---
+
+## Application Proposal - [Link](app_proposal.md)  
+## Technical Report - [Link](tech_report.md)
+
+---
+
 ## Table of Contents
 
 - [Project Description](#project-description)
@@ -13,6 +20,8 @@
     - [How to Submit](#how-to-submit)
 - [Project Evaluation](#project-evaluation)
 - [Intellectual Property Note](#intellectual-property-note)
+
+---
 
 ## Project Description
 

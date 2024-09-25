@@ -1,6 +1,10 @@
-# Tabletop Game Community Application
+# Adeptus Nexus
 
-##### Application Proposal
+###### Tabletop Game Community Application
+
+---
+
+### Application Proposal
 
 ---
 
