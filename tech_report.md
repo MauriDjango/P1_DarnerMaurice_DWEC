@@ -1,47 +1,3 @@
-<!-- 
-
-Criterios evaluados
-
-    1a) Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.
-    1b) Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores web.
-    1c) Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes web.
-    1d) Se han reconocido las particularidades de la programación de guiones y sus ventajas y desventajas sobre la programación tradicional.
-    1e) Se han verificado los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.
-    1f) Se han reconocido y evaluado las herramientas de programación sobre clientes web.
-
-Actividades
-
-    Idea de la aplicación: Describir de manera clara y concisa la idea de la aplicación web y su propósito.
-
-    Audiencia objetivo: Definir el público para el que está destinada la aplicación, explicando su relevancia y cómo se beneficiarán de la aplicación.
-
-    Análisis de mercado: Investigar y analizar aplicaciones similares en el mercado. Identificar características comunes y oportunidades de diferenciación para la nueva aplicación, destacando qué valor añadido ofrecerá.
-
-    Funcionalidades clave: Identificar y listar las funcionalidades principales que ofrecerá la aplicación (ej: sistema de autenticación, gestión de usuarios, etc.).
-
-    Modelos de ejecución (c.e. 1a): Investigar y comparar los modelos de ejecución en cliente y servidor, explicando sus diferencias y ejemplos de uso.
-
-    Lenguajes de programación web (c.e. 1c, 1d): Analizar los lenguajes de programación más utilizados para el desarrollo web en cliente, como JavaScript y TypeScript, explicando sus ventajas y desventajas.
-
-    Tecnologías a utilizar: Seleccionar las tecnologías (lenguajes de programación, frameworks, herramientas de desarrollo) que se utilizarán para el desarrollo de la aplicación. Justificar la elección en base a la investigación realizada. Asegurarse de incluir:
-
-        Evaluación de los mecanismos de integración de lenguajes de marcas con lenguajes de programación de clientes web (c.e. 1e): Describir cómo los lenguajes de marcas (como HTML) se integran con los lenguajes de programación (como JavaScript) en la aplicación.
-
-        Evaluación de herramientas de programación para clientes web (c.e. 1f): Seleccionar herramientas de desarrollo (editores de código, frameworks, bibliotecas) y justificar su elección. Explicar las funciones y ventajas de cada herramienta en el contexto del desarrollo web.
-
-    Compatibilidad en navegadores (c.e. 1b): Realizar un estudio sobre cómo los diferentes navegadores manejan JavaScript y otros lenguajes utilizados en el desarrollo web, identificando problemas de compatibilidad y soluciones. Incluye un análisis sobre cómo la integración de lenguajes de marcas y lenguajes de programación afecta la compatibilidad y el rendimiento de la aplicación en diferentes navegadores.
-
-
-2. Informe técnico detallado que incluya:
-
-   Done - Un análisis de los modelos de ejecución cliente/servidor, incluyendo ejemplos y comparaciones.
-   La evaluación de los lenguajes de programación web seleccionados, destacando sus ventajas y desventajas.
-   Done - Un estudio sobre la compatibilidad en navegadores, identificando posibles problemas y soluciones, y cómo estas consideraciones afectan la elección de tecnologías.
-   Done - Un análisis de los mecanismos de integración de los lenguajes de marcas con los lenguajes de programación de clientes web.
-   La evaluación de herramientas de programación para clientes web, explicando sus funciones y ventajas distintivas.
-   Un análisis de mercado que detalle la competencia existente y cómo la propuesta se diferencia y aporta valor nuevo.
--->
-
 # Tabletop Game Community Application
 
 ###### Technical Report
@@ -729,7 +685,7 @@ depending on the functionality and structure they provide.
 The **front-end** focuses on the presentation layer of the application—what the user interacts with directly. This 
 involves HTML, CSS, and JavaScript for building dynamic and responsive user interfaces.
 
-### Libraries
+### Libraries and Frameworks
 Libraries are collections of reusable code snippets, functions, or classes that help perform common tasks more efficiently
 without enforcing a specific project structure.
 
@@ -797,12 +753,48 @@ efficient and scalable application development across multiple platforms.
 
 ---
 
+### Integrated Development Environments (IDEs)
+
+<img src="assets/img/ides.png" alt="Browser Icons" style="max-width: 300px; width: auto; height: auto;">
+
+IDEs are crucial tools for modern web development, providing developers with comprehensive environments that facilitate 
+coding, testing, and debugging. They integrate various tools into a single application, streamlining the development process.
+
+#### Popular IDEs for Web Development
+
+ - Visual Studio Code: A lightweight, open-source code editor developed by Microsoft. It offers extensive support for 
+JavaScript, HTML, CSS, and many frameworks through a rich ecosystem of extensions. Its integrated terminal, debugging 
+capabilities, and Git support make it a popular choice among web developers.
+    
+ - WebStorm: A powerful IDE specifically designed for JavaScript development. Developed by JetBrains, WebStorm provides 
+advanced coding assistance, navigation, and refactoring tools, making it ideal for large projects using React, Vue, or 
+Angular.
+   
+ - Eclipse: An open-source IDE widely used for Java development, but it also supports web technologies through various 
+plugins. It is particularly favored for Spring development, providing integration with JPA and other Java frameworks.
+   
+ - IntelliJ IDEA: Another JetBrains product, this IDE offers robust support for Java and Spring development, making it 
+suitable for full-stack applications. It includes intelligent code assistance and various tools for testing and deployment.
+   
+ - Atom: An open-source text editor developed by GitHub, known for its hackability and customization. While not a full 
+IDE, it supports numerous plugins for enhancing web development workflows.
+   
+ - Sublime Text: A lightweight and fast code editor that supports various languages. It is extensible through plugins, 
+making it suitable for quick edits and projects.
+
+These IDEs enhance productivity by offering features such as syntax highlighting, code completion, debugging tools, and 
+version control integration, enabling developers to focus on building high-quality web applications.
+
+Image credits to - [https://kasun-r-weerasinghe.medium.com/ides-and-code-editors-d2800d10dda5](https://kasun-r-weerasinghe.medium.com/ides-and-code-editors-d2800d10dda5)
+
+---
+
 ## Market Analysis
 
 ### Overview of the Warhammer 40k Market
 
 The Warhammer 40k community is a dedicated and niche market that continues to grow, driven by the enthusiasm of its 
-players, hobbyists, and the wider fanbase. With the recent release of the 10th edition of Warhammer 40k and the public 
+players, hobbyists, and the wider fan base. With the recent release of the 10th edition of Warhammer 40k and the public 
 support from celebrities such as Henry Cavill, Trey Parker, and Ed Sheeran, the game's visibility has surged. The 
 Warhammer brand has managed to expand into various forms of media, including books, video games, and tabletop games, 
 creating a rich ecosystem for players and hobbyists to immerse themselves in. This ecosystem, however, comes with 
