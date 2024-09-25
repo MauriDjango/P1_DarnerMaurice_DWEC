@@ -4,6 +4,50 @@
 
 ---
 
+# Table of Contents
+
+1. [Client/Server Analysis](#clientserver-analysis)
+    - [Architecture](#architecture)
+    - 
+    - [Front-end Workings](#front-end-workings)
+    - 
+    - [Browsers](#browsers)
+       
+    - [Frameworks and Libraries](#frameworks-and-libraries)
+    - 
+    - [Back-end Workings](#back-end-workings)
+      
+2. [Web Development Languages](#web-development-languages)
+    - [Script Language Characteristics](#script-language-characteristics)
+       
+    - [Client-side Languages](#client-side-languages)
+       
+    - [Server-side Languages](#server-side-languages)
+     
+    - [Database and Query Languages](#database-and-query-languages)
+   
+    - [Other Languages](#other-languages)
+       
+3. [Browser Compatibility](#browser-compatibility)
+  
+4. [Markup Languages Integration](#markup-languages-integration)
+    - [JavaScript can manipulate HTML and CSS](#javascript-can-manipulate-html-and-css)
+    - [HTML can import JavaScript and CSS](#html-can-import-javascript-and-css)
+    - [CSS applies styles to HTML](#css-applies-styles-to-html)
+
+5. [Web Client Programming Tools](#web-client-programming-tools)
+    - [Front-end Tools](#front-end-tools)
+    - [Back-end Tools](#back-end-tools)
+    - [Integrated Development Environments (IDEs)](#integrated-development-environments-ides)
+   
+6. [Market Analysis](#market-analysis)
+   
+7. [Bibliography](#bibliography)
+
+
+
+---
+
 # Client/Server Analysis
 
 ---

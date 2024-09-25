@@ -4,6 +4,17 @@
 
 ---
 
+# Table of Contents
+
+1. [Description](#description)
+2. [Target Audience](#target-audience)
+3. [Market Analysis](#market-analysis)
+4. [Key Features](#key-features)
+5. [Selected Technologies for Development](#selected-technologies-for-development)
+6. [Conclusion](#conclusion)
+
+---
+
 ## Description
 
 Connecting an army of loyal fans, hobbyists, artists, vendors, and newcomers all in one App. Whilst not having to manage
